@@ -1,0 +1,4 @@
+#!/bin/sh
+node  "$(dirname $0)/../lib/node_modules/ws-server/ws-server.js"
+ret=$?
+exit $ret

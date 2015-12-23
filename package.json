@@ -1,0 +1,25 @@
+{
+  "name": "ws-server",
+  "version": "1.0.0",
+  "description": "Websocket server for sending packets between debugger and client installed on user's machine",
+  "main": "ws-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "c9",
+    "debugging",
+    "web",
+    "socket"
+  ],
+  "author": "Arkadiusz Zaluski <arkadiusz.zaluski@arm.com>",
+  "license": "MIT",
+  "dependencies": {
+    "atob": "^1.1.2",
+    "btoa": "^1.1.2",
+    "ws": "^0.8.0",
+    "optimist": "^0.6.1"
+  },
+  "preferGlobal": true,
+  "bin" : { "ws-server" : "./bin/ws-server" }
+}
