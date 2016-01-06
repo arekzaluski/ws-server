@@ -32,7 +32,6 @@ wss.on('connection', function connection(client) {
   });
 
   client.on('message', function incoming(message) {
-    console.log("Message received");
     if(clients.length ==1) {
       storedMessage = message;
       console.log("Message will be stored because second client is not connected.");
