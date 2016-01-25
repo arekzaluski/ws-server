@@ -19,7 +19,6 @@ wss.on('connection', function connection(client) {
     console.log("Cannot connect more clients");
     return;
   }
-  console.log("websocket connection opened");
   clients.push(client);
   client.pingssent = 0;
   var interval = setInterval(function() {
@@ -34,7 +33,7 @@ wss.on('connection', function connection(client) {
   client.on('message', function incoming(message) {
     if(clients.length ==1) {
       storedMessage = message;
-      console.log("Message will be stored because second client is not connected.");
+      console.log("Waiting for chrome app to connect...");
       return;
     }
     for(var i=0;i<clients.length;i++) {
