@@ -1,13 +1,12 @@
 {
   "name": "ws-server",
   "version": "1.0.0",
-  "description": "Websocket server for sending packets between debugger and client installed on user's machine",
+  "description": "Websocket server and client for sending packets between pyocd and mbed board",
   "main": "ws-server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "c9",
     "debugging",
     "web",
     "socket"
@@ -17,9 +16,14 @@
   "dependencies": {
     "atob": "^1.1.2",
     "btoa": "^1.1.2",
-    "ws": "^0.8.0",
-    "optimist": "^0.6.1"
+    "node-hid": "^0.5.1",
+    "optimist": "^0.6.1",
+    "ws": "^0.8.0"
+  },
+  "repository" : { 
+    "type" : "git",
+    "url" : "https://github.com/arekzaluski/ws-server.git"
   },
   "preferGlobal": true,
-  "bin" : { "ws-server" : "./bin/ws-server" }
+  "bin" : { "ws-server" : "./bin/ws-server" , "ws-client" : "./bin/ws-client" }
 }

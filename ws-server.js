@@ -31,9 +31,10 @@ wss.on('connection', function connection(client) {
   });
 
   client.on('message', function incoming(message) {
+    console.log("Client connected");
     if(clients.length ==1) {
       storedMessage = message;
-      console.log("Waiting for chrome app to connect...");
+      console.log("Waiting for second client to connect...");
       return;
     }
     for(var i=0;i<clients.length;i++) {
